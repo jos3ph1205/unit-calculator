@@ -58,8 +58,6 @@ function copyText(clicked_id) {
     window.getSelection().addRange(r);
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
-
-    window.alert("Copied: " + r);
     
     // document.getElementById("copiedContent").innerText = r;
     

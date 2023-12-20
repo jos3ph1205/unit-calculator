@@ -1,4 +1,4 @@
-console.log("Weight Math Loaded.");
+console.log("Volume Math Loaded.");
 
 function volume_math() {
     convert_lToCup();

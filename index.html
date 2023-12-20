@@ -7,7 +7,7 @@
         <title>Unit Calculator</title>
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="theme.css">
-        <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
         <script src="https://kit.fontawesome.com/ac6d0c0a18.js" crossorigin="anonymous"></script>
     </head>
     <body id="main" class="light">
@@ -22,7 +22,7 @@
         <div class="nav" id="navBar">
             <input id="length" class="navBtn navSelected" type="button" value="Length" onclick="toggle(this.id)">
             <input id="weight" class="navBtn navUnselected" type="button" value="Weight" onclick="toggle(this.id)">
-            <input id="volume" class="navBtn navUnselected" type="button" value="Volume (pending)" onclick="toggle(this.id)">
+            <input id="volume" class="navBtn navUnselected" type="button" value="Volume (Liquid)" onclick="toggle(this.id)">
         </div>
 
         <!-- MAIN CONTENT -->
@@ -133,14 +133,43 @@
             <div id="cal_volume">
                 <div class="calculators">
                     <div class="calculator">
-                        <h2>Millilitres To Cups</h2>
-                        <input id="userInput_mlToCup" class="userInput" type="number" placeholder="Number" oninput="convert_mlToCup()">
-                        <select class="type" id="type_mlToCup" onchange="convert_mlToCup()">
-                            <option value="mlToCup">Millilitres To Cups</option>
-                            <option value="cupToMl">Cups To Millilitres</option>
+                        <h2>Litres To Cups</h2>
+                        <input id="userInput_lToCup" class="userInput" type="number" placeholder="Number" oninput="convert_lToCup()">
+                        <select class="type" id="type_lToCup" onchange="convert_lToCup()">
+                            <option value="lToCup">Litres To Cups</option>
+                            <option value="cupToL">Cups To Litres</option>
                         </select>
-                        <p>Result: <span id="result_mlToCup" onclick="copyText(this.id)">---</span> </p>
+                        <p>Result: <span id="result_lToCup" onclick="copyText(this.id)">---</span> </p>
                     </div>
+                    <div class="calculator">
+                        <h2>Millilitres To Teaspoons</h2>
+                        <input id="userInput_mlToTsp" class="userInput" type="number" placeholder="Number" oninput="convert_mlToTsp()">
+                        <select class="type" id="type_mlToTsp" onchange="convert_mlToTsp()">
+                            <option value="mlToTsp">Millilitres To Teaspoons</option>
+                            <option value="tspToMl">Teaspoons To Millilitres</option>
+                        </select>
+                        <p>Result: <span id="result_mlToTsp" onclick="copyText(this.id)">---</span> </p>
+                    </div>
+                    <div class="calculator">
+                        <h2>Millilitres To Tablespoons</h2>
+                        <input id="userInput_mlToTbsp" class="userInput" type="number" placeholder="Number" oninput="convert_mlToTbsp()">
+                        <select class="type" id="type_mlToTbsp" onchange="convert_mlToTbsp()">
+                            <option value="mlToTbsp">Millilitres To Tablespoons</option>
+                            <option value="tspToMl">Tablespoons To Millilitres</option>
+                        </select>
+                        <p>Result: <span id="result_mlToTbsp" onclick="copyText(this.id)">---</span> </p>
+                    </div>
+                    <div class="calculator">
+                        <h2>Litres To Gallons</h2>
+                        <input id="userInput_lToGal" class="userInput" type="number" placeholder="Number" oninput="convert_lToGal()">
+                        <select class="type" id="type_lToGal" onchange="convert_lToGal()">
+                            <option value="lToGal">Litres To Gallons</option>
+                            <option value="tspToMl">Gallons To Litres</option>
+                        </select>
+                        <p>Result: <span id="result_lToGal" onclick="copyText(this.id)">---</span> </p>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- FOOTER -->
@@ -150,6 +179,7 @@
             </div>
             <select id="dp_select" class="dp" onchange="update_dp()">
                 <option disabled>D.P. Count</option>
+                <option value="0">0 d.p.</option>
                 <option value="1">1 d.p.</option>
                 <option value="2">2 d.p.</option>
                 <option value="3" selected>3 d.p.</option>
@@ -162,4 +192,5 @@
     <script src="main_fuctions.js"></script>
     <script src="length_math.js"></script>
     <script src="weight_math.js"></script>
+    <script src="volume_math.js"></script>
 </html>

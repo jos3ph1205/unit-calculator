@@ -81,7 +81,6 @@ main {
 
 /* --- Calculators --- */
 .calculators {
-    border: dashed 2px;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
